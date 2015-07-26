@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 //DFS
-vector<int> winner; // ¼ÇÂ¼Ã¿ÖÖÇé¿ö¿ÉÄÜµÄÊ¤Õß
+vector<int> winner; // è®°å½•æ¯ç§å¯èƒ½æƒ…å†µä¸‹çš„èƒœè€…
 
 void swap(int* i, int* j){
 	int t;

@@ -1,4 +1,4 @@
-//DFS
+﻿//DFS
 
 #include <stdio.h>  
 #include <stdlib.h>  
@@ -6,11 +6,11 @@
 #include <memory.h>  
 using namespace std;  
 int visit[10][10],mmax,n,cou;  
- //visit�0��ɶ��û�ţ�1�Ƿ��˵ﱤ��2�Ƿ��˷���ǽ  
- //cou�����ŵĸ�����mmax��¼���cou�����ֵ������ĿҪ��ֵ  
-int find(int x,int y) // �ж��Ƿ���Է���  
+ //visit里，0是啥都没放，1是放了碉堡，2是放了防火墙  
+ //cou计数放的个数，mmax记录最大cou的最大值，即题目要求值  
+int find(int x,int y) // 判断是否可以放置  
 {     
-    for(int i=y; i>=1; i--) //�ĸ�ѭ�����ӵ㣨X,Y�����������жϣ�����еﱤ������0�������ǽ�������¸�ѭ����  
+    for(int i=y; i>=1; i--) //四个循环，从点（X,Y）上下左右判断，如果有碉堡，返回0，如果有墙，继续下个循环。  
     {  
         if( visit[x][i] == 1 )  
             return 0;  
